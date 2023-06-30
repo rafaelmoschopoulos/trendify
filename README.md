@@ -31,7 +31,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/rafmosch/trendify">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.png" alt="Logo" width="103" height="28">
   </a>
 
 <h3 align="center">project_title</h3>
@@ -195,7 +195,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Your Name - [@raf_mos](https://twitter.com/raf_mos) - raf.mos@princeton.edu
 
 Project Link: [https://github.com/rafmosch/trendify](https://github.com/rafmosch/trendify)
 
