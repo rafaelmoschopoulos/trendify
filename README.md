@@ -117,35 +117,25 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
+* Prereq 1
   ```sh
   npm install npm@latest -g
   ```
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/rafmosch/trendify.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+1. Step 1
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+* Political opinion tracking: This tool can be used in monitoring people's attitude towards political matters over time, correlating any deviations to real-world events that may have taken place.
+* Marketing choices: Businesses can see first-hand results of recent or historical marketing choices (i.e., the release of a new product), and how those affected the reputation of the brand.
+* Geographical reach: It is possible to see where in the world are most tweets being posted containing certain keywords, effectively identifying one's audience geographically.
+* Trend tracking: Ability to see how the relevance of a trend/idea varies over time, leading to informed investment decisions.
+
 
 <!--_For more examples, please refer to the [Documentation](https://example.com)_-->
 
@@ -173,6 +163,7 @@ Use this space to show useful examples of how a project can be used. Additional 
     - [ ] Create backend with Flask
     - [ ] Create frontend with React in Material UI style
         - [ ] Graph of sentiment score against time (maybe add 'download to csv' option)
+        - [ ] Graph of amount of relevant tweets posted against time (to see how trends rise and fall)
         - [ ] Calendar widget to enter dates
         - [ ] Map widget to show areas from which posts originate the most (i.e., top 5 countries)
         - [ ] Show relevant keywords in world cloud style
