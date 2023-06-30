@@ -94,7 +94,7 @@ Furthermore, other relevant features include the ability to see where in the wor
 
 
 ### Built With
-* [![Python][Python.org]][Python-url]]
+* [![Python][Python.org]][Python-url]
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
 * [![Vue][Vue.js]][Vue-url]
