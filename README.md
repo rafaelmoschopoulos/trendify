@@ -100,6 +100,7 @@ Furthermore, other relevant features include the ability to see where in the wor
 * [![scikit-learn][scikit-learn-badge]][scikit-learn-url]
 * [![NLTK][NLTK-badge]][NLTK-url]
 * [![pandas][pandas-badge]][pandas-url]
+* [![Tweepy][tweepy-badge]][tweepy-url]
 
 
 
@@ -267,6 +268,9 @@ Project Link: [https://github.com/rafmosch/trendify](https://github.com/rafmosch
 
 [pandas-badge]: https://img.shields.io/badge/pandas-130654?style=for-the-badge&logo=pandas&logoColor=ffffff
 [pandas-url]: https://pandas.pydata.org/
+
+[tweepy-badge]: https://img.shields.io/badge/Tweepy-5ea9de?style=for-the-badge&logo=twitter&logoColor=ffffff
+[tweepy-url]: https://www.tweepy.org/
 
 
 
