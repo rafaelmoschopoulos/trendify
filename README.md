@@ -34,7 +34,7 @@
     <img src="images/logo.png" alt="Logo">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Trendify</h3>
 
   <p align="center">
     A tool used in tracking the public sentiment of a concept over time, by analyzing relevant tweets.
@@ -94,7 +94,7 @@ Furthermore, other relevant features include the ability to see where in the wor
 
 
 ### Built With
-
+* [![Python][Python.org]][Python-url]]
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
 * [![Vue][Vue.js]][Vue-url]
@@ -231,6 +231,8 @@ Project Link: [https://github.com/rafmosch/trendify](https://github.com/rafmosch
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png
+[Python.org]: https://img.shields.io/badge/Python-4584b6?style=for-the-badge&logo=python&logoColor=ffde57
+[Python-url]: https://www.python.org/
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
