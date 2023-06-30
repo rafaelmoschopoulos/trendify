@@ -155,10 +155,29 @@ Use this space to show useful examples of how a project can be used. Additional 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [ ] Tweet mining
+    - [ ] Retrieve tweets based on keywords
+    - [ ] Retrieve tweets posted between certain dates
+    - [ ] Retrieve tweets posted by users from certain geographical areas
+    - [ ] Find popular users posting tweets with said keywords
+    - [ ] Identify other relevant keywords
+    - [ ] Group tweets by their post date (each group receives sentiment score)
+- [ ] Sentiment analysis
+    - [ ] Find and clean up appropriate dataset
+    - [ ] Preprocessing (lowercase, lemmatization, remove punctuation, etc.)
+    - [ ] Choice of classifier model (i.e., logistic regression, random forest) and training
+    - [ ] Hyperparameter tweaking - grid search
+    - [ ] Processing and scoring of retrieved tweets
+- [ ] Presentation
+    - [ ] Create backend with Flask
+    - [ ] Create frontend with React in Material UI style
+        - [ ] Graph of sentiment score against time (maybe add 'download to csv' option)
+        - [ ] Calendar widget to enter dates
+        - [ ] Map widget to show areas from which posts originate the most (i.e., top 5 countries)
+        - [ ] Show relevant keywords in world cloud style
+- [ ] Release
+    - [ ] Acquire hosting server & domain
+    - [ ] Promotion
 
 See the [open issues](https://github.com/rafmosch/trendify/issues) for a full list of proposed features (and known issues).
 
