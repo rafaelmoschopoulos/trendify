@@ -239,7 +239,7 @@ Project Link: [https://github.com/rafmosch/trendify](https://github.com/rafmosch
 [license-shield]: https://img.shields.io/github/license/rafmosch/trendify.svg?style=for-the-badge
 [license-url]: https://github.com/rafmosch/trendify/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://www.linkedin.com/in/rafael-moschopoulos-50161b281/
 [product-screenshot]: images/screenshot.png
 
 [Python-badge]: https://img.shields.io/badge/Python-4584b6?style=for-the-badge&logo=python&logoColor=ffde57
