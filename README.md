@@ -31,7 +31,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/rafmosch/trendify">
-    <img src="images/logo.png" alt="Logo" width="103" height="28">
+    <img src="images/logo.png" alt="Logo">
   </a>
 
 <h3 align="center">project_title</h3>
