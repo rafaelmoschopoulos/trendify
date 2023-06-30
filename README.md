@@ -37,7 +37,7 @@
 <h3 align="center">project_title</h3>
 
   <p align="center">
-    project_description
+    A tool used in tracking the public sentiment of a concept over time, by analyzing relevant tweets.
     <br />
     <a href="https://github.com/rafmosch/trendify"><strong>Explore the docs »</strong></a>
     <br />
@@ -83,9 +83,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+Twitter is a platform where anyone can publicly and succinctly state their personal, honest opinion regarding a trend, idea, or concept. Hence, the retrieval of numerous tweets regarding a specific concept can be used to sentimentally analyze them and provide a positivity/negativity score. Taking into consideration tweets posted over a certain period of time, the variation of public attitude with regards to this concept can be visualized.
+
+Furthermore, other relevant features include the ability to see where in the world the given idea is being stated the most in tweets, who are the most popular Tweeter users talking about this idea right now, and what other keywords/ideas are often correlated to the given one.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
