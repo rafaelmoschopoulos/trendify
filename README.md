@@ -155,7 +155,7 @@ This is an example of how to list things you need to use the software and how to
     - [ ] Group tweets by their post date (each group receives sentiment score)
 - [ ] Sentiment analysis
     - [ ] Find and clean up appropriate dataset
-    - [ ] Preprocessing (lowercase, lemmatization, remove punctuation, etc.)
+    - [x] Preprocessing (lowercase, lemmatization, remove punctuation, etc.)
     - [ ] Choice of classifier model (i.e., logistic regression, random forest) and training
     - [ ] Hyperparameter tweaking - grid search
     - [ ] Processing and scoring of retrieved tweets
