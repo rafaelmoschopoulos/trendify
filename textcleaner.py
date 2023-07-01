@@ -67,7 +67,9 @@ class TextCleaner:
         misspelled = self.spell_checker.unknown(text.split()) # Store mispelled words
         for word in text.split():
             if word in misspelled:
-                corrected.append(self.spell_checker.correction(word)) # Append with corected word
+                corrected_word = self.spell_checker.correction(word)
+                if corrected_word != None:
+                    corrected.append(corrected_word) # Append with corected word
             else:
                 corrected.append(word)
         text = " ".join(corrected)
