@@ -17,30 +17,36 @@ class TextCleaner:
         self.stopwords_list = set(stopwords.words('english'))
         self.lemmatizer = WordNetLemmatizer()
         self.wordnet_map = {"N":wordnet.NOUN, "V":wordnet.VERB, "J":wordnet.ADJ, "R":wordnet.ADV}
+        self.emoticon_set = set(emoticons_dict.keys())
     
-    def clean(self, text: str) -> str:
+    def clean(self, text: str, spell_check= True) -> str:
         text = text.lower()
-
+        
+        # Remove hashtags and mentions
+        text = re.sub(r"#\w+", "", text) # Maybe hashtags shouldn't be removed
+        text = re.sub(r"@\w+", "", text)
+        
         # Replace emoticons with their meaning
         for emot, meaning in emoticons_dict.items():
             text = text.replace(emot, meaning)
 
-        # Replace emojis with their meaning
-        text = emoji.demojize(text).replace(":", "").replace("_", " ")
-        
-        # Replace frequent chat words (i.e., IMO) with actual words
-        new_text = []
-        for w in text.split():
-            if w in self.chat_words_list:
-                new_text.append(chat_words_map_dict[w])
-            else:
-                new_text.append(w)
-        text = " ".join(new_text)
+        # Handle cases such as "haaaappy" -> "happy"
+        text = re.sub(r'(.)\1{2,}', lambda match: match.group(1), text)
 
         # Convert contractions (i.e., i'm) to full form
         text = contractions.fix(text)
 
-        text = clean(text,
+        # Replace chat/slang words
+        tok_list = text.split()
+        new_list = []
+        for tok in tok_list:
+            if tok in chat_words_map_dict:
+                new_list.extend(chat_words_map_dict[tok].split())
+            else:
+                new_list.append(tok)
+        tok_list = new_list
+               
+        tok_list = [clean(tok,
             fix_unicode=True,              # fix various unicode errors
             to_ascii=True,                 # transliterate to closest ASCII representation
             lower=True,                    # lowercase text
@@ -60,28 +66,29 @@ class TextCleaner:
             replace_with_digit="",
             replace_with_currency_symbol="",
             lang="en"                       # set to 'de' for German special handling
-        )
+        ) for tok in tok_list] 
 
-        # Correct spelling
-        corrected = []
-        misspelled = self.spell_checker.unknown(text.split()) # Store mispelled words
-        for word in text.split():
-            if word in misspelled:
-                corrected_word = self.spell_checker.correction(word)
-                if corrected_word != None:
-                    corrected.append(corrected_word) # Append with corected word
-            else:
-                corrected.append(word)
-        text = " ".join(corrected)
+        if spell_check:
+            # Correct spelling
+            corrected = []
+            misspelled = self.spell_checker.unknown(tok_list) # Store mispelled words
+            for word in tok_list:
+                if word in misspelled:
+                    corrected_word = self.spell_checker.correction(word)
+                    if corrected_word != None:
+                        corrected.append(corrected_word) # Append with corected word
+                else:
+                    corrected.append(word)
+            tok_list = corrected
 
         # Remove stopwords (i.e., small, frequent words that dont contribute to meaning)
-        text = " ".join([word for word in text.split() if word not in self.stopwords_list])
+        tok_list = [word for word in tok_list if word not in self.stopwords_list]
 
         # Lemmatize (find root of each word)
-        pos_tagged_text = nltk.pos_tag(text.split()) # Find part of speech of each word
+        pos_tagged_text = nltk.pos_tag(tok_list) # Find part of speech of each word
         text = " ".join([self.lemmatizer.lemmatize(word, self.wordnet_map.get(pos[0], wordnet.NOUN)) for word, pos in pos_tagged_text])
         
-        # Remove extra spaces
-        text = re.sub(' +', ' ', text)
+        # Remove non alphanumeric characters
+        text = re.sub('[^a-zA-Z ]', '', text)
 
         return text
